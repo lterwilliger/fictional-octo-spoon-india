@@ -16,7 +16,7 @@ $(document).ready(function() {
             clearElement("#checkIn", "input");
             clearElement("#checkOut", "input");
             clearElement("#password", "input");
-            clearElement("#username", "input");
+            clearElement("#email", "input");
 
       });
       $('input:radio[name="radioDefault"]').change(
@@ -53,6 +53,50 @@ $(document).ready(function() {
           //   }
           // }
     });
+ $('#btnLoadData').click(function() {
+    console.log("clicked");
+
+//     let jsonURL = "https://www.w3schools.com/jquery/demo_ajax_json.js";
+
+//     let jsonURL = "demo.json";
+
+    let jsonURL = "https://lterwilliger.github.io/fictional-octo-spoon-india/demo.json";
+
+    $.ajax({
+        url: jsonURL,
+        dataType: "json",
+        success: function(data) {
+            //can log either the entire data or invoke specific properties data.zipCode...
+            console.log(data.username);
+            
+            //loads first name into my first input box (in example #1)
+            $("#username").val(data.username);
+            console.log(data.username);
+
+            $('input[type=checkbox]').each(function () {
+                if (data.radioDefault === $(this).val())
+                {
+                  $(this).prop('checked', true)
+                    console.log($(this));
+               }
+
+            });
+            //console.log (sList);
+
+            $.each(data, function (key, val) {
+                //step through results
+                console.log(key, val);
+                //get each data item
+                //put it in the right place
+                //$("#dataContainer").append(key + " " + val);
+                $(`#${key}`).val(val);
+                
+            });
+        }
+    });
+});
+    
+  
 // Clear element by type
     function clearElement(elementId, elementType){
         if(elementType == "html"){
@@ -65,7 +109,10 @@ $(document).ready(function() {
           $(elementId).val(" ");
         }
     }
-
-
-
+	function checkInput() {
+	  let x = document.getElementById(" ").value;
+	  let text;
+	  
+	
+	}
 });

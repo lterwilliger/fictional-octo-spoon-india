@@ -1,0 +1,9 @@
+{
+ "username" : "John Doe",
+  "phone" : "123-456-7890",
+  "checkIn" : "afdsfsf",
+  "checkOut" : "fdsafsafs",
+  "email" : "john-doe@email.com",
+  "password" : "*******************",
+  "radioDefault" : "first"
+}

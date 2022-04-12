@@ -5,7 +5,7 @@ $(document).ready(function() {
     var retr = document.getElementById("againTime");
     frst.style.display = "none";
     retr.style.display = "none";
-
+    let alphaRegex = /^[a-zA-Z]*$/;
     var el = document.getElementById("submitButton");
     var elName = document.getElementById("username");
 
@@ -45,58 +45,22 @@ $(document).ready(function() {
           else {
             console.log("Something else");
           }
-          //   var x = document.getElementById("firstTime");
-          //   if (x.style.display === "none") {
-          //     x.style.display = "block";
-          //   } else {
-          //     x.style.display = "none";
-          //   }
-          // }
+
     });
- $('#btnLoadData').click(function() {
-    console.log("clicked");
+    $('#submitButton').click(function() {
 
-//     let jsonURL = "https://www.w3schools.com/jquery/demo_ajax_json.js";
+        if ($('#noSpaces').val()) {
+            console.log("there is something in this text box");
+            $('#noSpaces').removeClass("error")
+        } else {
+            console.log("there is NOTHING in this text box");
+            $('#noSpaces').removeClass("success").addClass("error").focus();
+            //bring focus to it
+            //change the placeholder text
 
-//     let jsonURL = "demo.json";
-
-    let jsonURL = "https://lterwilliger.github.io/fictional-octo-spoon-india/demo.json";
-
-    $.ajax({
-        url: jsonURL,
-        dataType: "json",
-        success: function(data) {
-            //can log either the entire data or invoke specific properties data.zipCode...
-            console.log(data.username);
-            
-            //loads first name into my first input box (in example #1)
-            $("#username").val(data.username);
-            console.log(data.username);
-
-            $('input[type=checkbox]').each(function () {
-                if (data.radioDefault === $(this).val())
-                {
-                  $(this).prop('checked', true)
-                    console.log($(this));
-               }
-
-            });
-            //console.log (sList);
-
-            $.each(data, function (key, val) {
-                //step through results
-                console.log(key, val);
-                //get each data item
-                //put it in the right place
-                //$("#dataContainer").append(key + " " + val);
-                $(`#${key}`).val(val);
-                
-            });
         }
-    });
-});
-    
-  
+
+    })
 // Clear element by type
     function clearElement(elementId, elementType){
         if(elementType == "html"){
@@ -109,10 +73,7 @@ $(document).ready(function() {
           $(elementId).val(" ");
         }
     }
-	function checkInput() {
-	  let x = document.getElementById(" ").value;
-	  let text;
-	  
-	
-	}
+
+
+
 });

@@ -1,8 +1,8 @@
 {
   "username" : "John Doe",
   "phone" : "123-456-7890",
-  "checkIn" : "afdsfsf",
-  "checkOut" : "fdsafsafs",
+  "checkIn" : 0,
+  "checkOut" : 0,
   "email" : "john-doe@email.com",
   "password" : "*******************",
   "radioDefault" : "first"

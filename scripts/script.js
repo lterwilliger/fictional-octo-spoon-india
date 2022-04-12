@@ -8,6 +8,7 @@ $(document).ready(function() {
     let alphaRegex = /^[a-zA-Z]*$/;
     var el = document.getElementById("submitButton");
     var elName = document.getElementById("username");
+    isChecked();
 
 // clear button function calls
     $('#btnClear').click(function(){
@@ -19,32 +20,35 @@ $(document).ready(function() {
             clearElement("#email", "input");
 
       });
-      $('input:radio[name="radioDefault"]').change(
-        function(){
-          if ($(this).is(':checked') && $(this).val() == 'first' ) {
-            //console.log("first is checked");
-              var frs = document.getElementById("firstTime");
-              var again = document.getElementById("againTime");
-              if (frs.style.display === "none") {
-                frs.style.display = "block";
-                again.style.display = "none";
-              } else {
-                frs.style.display = "none";
-              }
-          }
-          else if ($(this).is(':checked') && $(this).val() == 'return' ) {
+      function isChecked(){
+        if ($(this).is(':checked') && $(this).val() == 'first' ) {
+          //console.log("first is checked");
             var frs = document.getElementById("firstTime");
             var again = document.getElementById("againTime");
-            if (again.style.display === "none") {
-              again.style.display = "block";
-              frs.style.display = "none";
-            } else {
+            if (frs.style.display === "none") {
+              frs.style.display = "block";
               again.style.display = "none";
+            } else {
+              frs.style.display = "none";
             }
+        }
+        else if ($(this).is(':checked') && $(this).val() == 'return' ) {
+          var frs = document.getElementById("firstTime");
+          var again = document.getElementById("againTime");
+          if (again.style.display === "none") {
+            again.style.display = "block";
+            frs.style.display = "none";
+          } else {
+            again.style.display = "none";
           }
-          else {
-            console.log("Something else");
-          }
+        }
+        else {
+          console.log("Something else");
+        }
+      }
+      $('input:radio[name="radioDefault"]').change(
+        function(){
+          isChecked();
 
     });
     $('#submitButton').click(function() {

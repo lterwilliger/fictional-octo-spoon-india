@@ -19,6 +19,10 @@ $(document).ready(function() {
             clearElement("#email", "input");
 
       });
+      $('input:radio[name="radioDefault"]').change(
+        function(){
+          isChecked();
+      });
       function isChecked(){
         if ($(this).is(':checked') && $(this).val() == 'first' ) {
           //console.log("first is checked");
@@ -45,10 +49,7 @@ $(document).ready(function() {
           console.log("Something else");
         }
       }
-      $('input:radio[name="radioDefault"]').change(
-        function(){
-          isChecked();
-      });
+
     $('#submitButton').click(function() {
 
         if ($('#username').val()) {

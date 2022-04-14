@@ -24,10 +24,10 @@ $(document).ready(function() {
           isChecked();
       });
       function isChecked(){
-        if ($(this).is(':checked') && $(this).val() == 'first' ) {
-          //console.log("first is checked");
-            var frs = document.getElementById("firstTime");
-            var again = document.getElementById("againTime");
+        var frs = document.getElementById("firstTime");
+        var again = document.getElementById("againTime");
+        if ($('#radioDefault').is(':checked') && $('#radioDefault').val() == 'first' ) {
+          console.log("first is checked");
             if (frs.style.display === "none") {
               frs.style.display = "block";
               again.style.display = "none";
@@ -36,8 +36,6 @@ $(document).ready(function() {
             }
         }
         else if ($(this).is(':checked') && $(this).val() == 'return' ) {
-          var frs = document.getElementById("firstTime");
-          var again = document.getElementById("againTime");
           if (again.style.display === "none") {
             again.style.display = "block";
             frs.style.display = "none";

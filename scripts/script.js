@@ -35,7 +35,7 @@ $(document).ready(function() {
               frs.style.display = "none";
             }
         }
-        else if ($(this).is(':checked') && $(this).val() == 'return' ) {
+        else if ($('#radioDefault').is(':checked') && $('#radioDefault').val() == 'return' ) {
           if (again.style.display === "none") {
             again.style.display = "block";
             frs.style.display = "none";

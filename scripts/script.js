@@ -74,6 +74,5 @@ $(document).ready(function() {
           $(elementId).val("");
         }
     }
-
-});
 export {isChecked};
+});

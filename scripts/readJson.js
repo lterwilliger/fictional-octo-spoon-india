@@ -1,7 +1,8 @@
-import {isChecked} from './script.js';
+
 
 
 $('#btnLoadData').click(function() {
+  import {isChecked} from './script.js';
     console.log("clicked");
 
 //     let jsonURL = "https://www.w3schools.com/jquery/demo_ajax_json.js";

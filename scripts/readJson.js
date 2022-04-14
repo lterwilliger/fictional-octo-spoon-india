@@ -1,3 +1,6 @@
+import {isChecked} from './script.js';
+
+
 $('#btnLoadData').click(function() {
     console.log("clicked");
 

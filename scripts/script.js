@@ -8,7 +8,6 @@ $(document).ready(function() {
     let alphaRegex = /^[a-zA-Z]*$/;
     var el = document.getElementById("submitButton");
     var elName = document.getElementById("username");
-    isChecked();
 
 // clear button function calls
     $('#btnClear').click(function(){
@@ -49,8 +48,7 @@ $(document).ready(function() {
       $('input:radio[name="radioDefault"]').change(
         function(){
           isChecked();
-
-    });
+      });
     $('#submitButton').click(function() {
 
         if ($('#noSpaces').val()) {
@@ -71,10 +69,10 @@ $(document).ready(function() {
             $(elementId).html("");
         }
         else if(elementType=="input"){
-            $(elementId).val(" ");
+            $(elementId).val("");
         }
         else {
-          $(elementId).val(" ");
+          $(elementId).val("");
         }
     }
 

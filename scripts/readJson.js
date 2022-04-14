@@ -36,6 +36,7 @@ $('#btnLoadData').click(function() {
                 $(`#${key}`).val(val);
 
             });
+            isChecked();
         }
     });
 });

@@ -37,7 +37,7 @@
          <br>
          <div class="col-md-10 offset-md-1">
             <!-- Form inside container -->
-            <form>
+            <form action="">
                <!-- form introduction -->
                <h2> The Best Hotel Chain </h2>
                <p> The best hotel for your destination rest-ination. </p>
@@ -118,10 +118,26 @@
                   </select>
                </div>
                <br>
+
+               <!-- This is the div where output from user entry goes -->
+               <div class="container-fluid" id="boxOutput">
+               <div class="row">
+                 <div class="col-lg-5 offset-4">
+                   <h2 id="nameOut"> </h2>
+                   <p id="infoOut"> </p>
+                </div>
+              </div>
+            </div>
+              <br>
                <!-- buttons to clear and submit -->
-               <button id="submitButton" type="submit" class="btn btn-primary">submit</button>
-               <button id="btnClear" class="btn btn-secondary">clear form</button>
-               <button id="btnLoadData" class="btn btn-secondary">load example </button>
+
+               <div class="row">
+                 <div class="col-sm-5 offset-4">
+                   <button id="submitButton" type="submit" class="btn btn-primary">submit</button>
+                   <button id="btnClear" class="btn btn-secondary">clear form</button>
+                   <button id="btnLoadData" class="btn btn-secondary">load example </button>
+                </div>
+               </div>
             </form>
          </div>
          <br>

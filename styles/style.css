@@ -11,3 +11,6 @@ body{
 .tab4 {
     tab-size: 40;
 }
+#boxOutput{
+  background-color: lightsteelblue;
+}

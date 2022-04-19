@@ -20,12 +20,13 @@ $('#btnLoadData').click(function() {
             $("#username").val(data.username);
 
             $('input:radio[name="radioDefault"]').each(function () {
-                if (data.radioDefault === $(this).val())
-                {
+                // if (data.radioDefault === $(this).val())
+                // {
                   $(this).prop('checked', true)
-                    console.log($(this));
-               }
-
+                    console.log("Checked function call: ",$(this));
+                      isChecked();
+               // }
+               return false;
             });
             //console.log (sList);
 
@@ -41,4 +42,6 @@ $('#btnLoadData').click(function() {
 
         }
     });
+
+    return false;
 });

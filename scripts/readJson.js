@@ -5,9 +5,9 @@ $('#btnLoadData').click(function() {
 
 //     let jsonURL = "https://www.w3schools.com/jquery/demo_ajax_json.js";
 
-    let jsonURL = "demo.json";
+//    let jsonURL = "demo.json";
 
-//   let jsonURL = "https://lterwilliger.github.io/fictional-octo-spoon-india/demo.json";
+   let jsonURL = "https://lterwilliger.github.io/fictional-octo-spoon-india/demo.json";
 
     $.ajax({
         url: jsonURL,

@@ -8,7 +8,7 @@ $(document).ready(function() {
     let alphaRegex = /^[a-zA-Z]*$/;
     var el = document.getElementById("submitButton");
     var elName = document.getElementById("username");
-
+    isChecked();
 // clear button function calls
     $('#btnClear').click(function(){
             clearElement("#username", "input");
@@ -21,13 +21,13 @@ $(document).ready(function() {
       });
       $('input:radio[name="radioDefault"]').change(
         function(){
-          console.log($('input:radio[name="radioDefault"]').val())
+          // console.log($('input:radio[name="radioDefault"]').val());
           isChecked();
 
       });
       function isChecked(){
-        console.log($('input[name="radioDefault"]:checked').val())
-        if ($('input:radio[name="radioDefault"]').is(':checked') && $('input:radio[name="radioDefault"]').val() == 'first' ) {
+        console.log($('input[name="radioDefault"]:checked').val());
+        if ($('input:radio[name="radioDefault"]').is(':checked') && $('input:radio[name="radioDefault"]:checked').val() == 'first' ) {
           var frs = document.getElementById("firstTime");
           var again = document.getElementById("againTime");
           console.log("first is checked");
@@ -38,7 +38,7 @@ $(document).ready(function() {
               frs.style.display = "none";
             }
         }
-        else if ($('input:radio[name="radioDefault"]').is(':checked') && $('input:radio[name="radioDefault"]').val() == 'return' ) {
+        else if ($('input:radio[name="radioDefault"]').is(':checked') && $('input:radio[name="radioDefault"]:checked').val() == 'return' ) {
           var frs = document.getElementById("firstTime");
           var again = document.getElementById("againTime");
           console.log("return is checked");

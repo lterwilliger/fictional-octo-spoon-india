@@ -21,12 +21,15 @@ $(document).ready(function() {
       });
       $('input:radio[name="radioDefault"]').change(
         function(){
+          console.log($('input:radio[name="radioDefault"]').val())
           isChecked();
+
       });
       function isChecked(){
-        var frs = document.getElementById("firstTime");
-        var again = document.getElementById("againTime");
-        if ($('#radioDefault').is(':checked') && $('#radioDefault').val() == 'first' ) {
+        console.log($('input[name="radioDefault"]:checked').val())
+        if ($('input:radio[name="radioDefault"]').is(':checked') && $('input:radio[name="radioDefault"]').val() == 'first' ) {
+          var frs = document.getElementById("firstTime");
+          var again = document.getElementById("againTime");
           console.log("first is checked");
             if (frs.style.display === "none") {
               frs.style.display = "block";
@@ -35,7 +38,10 @@ $(document).ready(function() {
               frs.style.display = "none";
             }
         }
-        else if ($('#radioDefault').is(':checked') && $('#radioDefault').val() == 'return' ) {
+        else if ($('input:radio[name="radioDefault"]').is(':checked') && $('input:radio[name="radioDefault"]').val() == 'return' ) {
+          var frs = document.getElementById("firstTime");
+          var again = document.getElementById("againTime");
+          console.log("return is checked");
           if (again.style.display === "none") {
             again.style.display = "block";
             frs.style.display = "none";

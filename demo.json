@@ -4,5 +4,5 @@
   "checkIn" : "2022-05-01",
   "checkOut" : "2022-05-06",
   "email" : "john-doe@email.com",
-  "radioDefault" : "first"
+  "radioDefault" : "return"
 }

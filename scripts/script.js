@@ -107,7 +107,8 @@ $(document).ready(function() {
         }
         else {
           $(elementId).prop("checked", false);
-          isChecked();
+          frst.style.display = "none";
+          retr.style.display = "none";
         }
         box.style.display = "none";
         return false;
